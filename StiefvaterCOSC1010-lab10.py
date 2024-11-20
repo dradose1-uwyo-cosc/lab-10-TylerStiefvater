@@ -28,8 +28,8 @@ except Exception as e:
 try:
     with rockyou_file_path.open('r', encoding='utf-8', errors='ignore') as rockyou_file:
         for line in rockyou_file:
-            password = line.strip()  # Remove whitespace/newline
-            hashed_password = get_hash(password)  # Hash the password
+            password = line.strip() 
+            hashed_password = get_hash(password)
             
             # Compare the hashes
             if hashed_password == target_hash:
